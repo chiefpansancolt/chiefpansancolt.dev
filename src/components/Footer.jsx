@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
-import navs from '@/data/navigation'
+import { Container } from "@/components/Container"
+import { Logo } from "@/components/Logo"
+import navs from "@/data/navigation"
+import Link from "next/link"
 
 export function Footer() {
   return (
@@ -47,8 +47,7 @@ export function Footer() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-            Copyright &copy; {new Date().getFullYear()} Christopher Pezza. All
-            rights reserved.
+            Copyright &copy; {new Date().getFullYear()} Christopher Pezza. All rights reserved.
           </p>
         </div>
       </Container>

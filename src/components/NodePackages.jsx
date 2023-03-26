@@ -1,9 +1,8 @@
-import Image from 'next/image'
-import clsx from 'clsx'
-import Link from 'next/link'
-
-import { Container } from '@/components/Container'
-import { nodepackages } from '@/data/features'
+import { Container } from "@/components/Container"
+import { nodepackages } from "@/data/features"
+import clsx from "clsx"
+import Image from "next/image"
+import Link from "next/link"
 
 function Feature({ feature, className }) {
   return (
@@ -37,11 +36,7 @@ function FeaturesDesktop() {
     <div className="hidden lg:mt-20 lg:block">
       <div className="grid grid-cols-3 gap-x-8">
         {nodepackages.map((nodepackage) => (
-          <Feature
-            key={nodepackage.name}
-            feature={nodepackage}
-            className="relative"
-          />
+          <Feature key={nodepackage.name} feature={nodepackage} className="relative" />
         ))}
       </div>
     </div>

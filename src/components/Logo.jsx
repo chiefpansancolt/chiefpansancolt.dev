@@ -13,10 +13,7 @@ export function Logo() {
       <defs>
         <g />
         <clipPath id="id1">
-          <path
-            d="M 46 19 L 56.742188 19 L 56.742188 36 L 46 36 Z M 46 19 "
-            clipRule="nonzero"
-          />
+          <path d="M 46 19 L 56.742188 19 L 56.742188 36 L 46 36 Z M 46 19 " clipRule="nonzero" />
         </clipPath>
         <clipPath id="id2">
           <path
