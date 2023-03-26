@@ -1,4 +1,4 @@
-import logoStimulusTailwind from "@/images/logos/Stimulus-x-Tailwind-icon.png"
+import logoStimulusTailwind from "@/images/logos/Stimulus-x-Tailwind-Icon.png"
 import screenshotChiefpansancoltDevSite from "@/images/screenshots/chiefpansancolt-dev-site.png"
 import screenshotChiefpansancoltLiveSite from "@/images/screenshots/chiefpansancolt-live-site.png"
 import screenshotChrispezzaSite from "@/images/screenshots/chrispezza-site.png"
