@@ -5,9 +5,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier './**/*.{css,js,json,yml,md}' -l",
-    "format:check": "prettier './**/*.{css,js,json,yml,md}' -c",
-    "format:fix": "prettier './**/*.{css,js,json,yml,md}' -w",
+    "format": "prettier './**/*.{css,js,jsx,json,yml,md}' -l",
+    "format:check": "prettier './**/*.{css,js,jsx,json,yml,md}' -c",
+    "format:fix": "prettier './**/*.{css,js,jsx,json,yml,md}' -w",
     "lint": "next lint"
   },
   "browserslist": "defaults, not ie <= 11",
