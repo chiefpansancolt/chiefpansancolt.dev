@@ -1,14 +1,14 @@
 {
   "name": "chiefpansancolt.dev",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "format": "prettier './**/*.{css,js,json,yml,md,html,jsx,mdx}' --list-different",
-    "format:fix": "prettier './**/*.{css,js,json,yml,md,html,jsx,mdx}' --write"
+    "format": "prettier './**/*.{css,js,json,yml,md}' -l",
+    "format:check": "prettier './**/*.{css,js,json,yml,md}' -c",
+    "format:fix": "prettier './**/*.{css,js,json,yml,md}' -w",
+    "lint": "next lint"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
