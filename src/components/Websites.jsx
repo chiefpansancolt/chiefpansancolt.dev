@@ -7,6 +7,7 @@ import { Container } from '@/components/Container'
 import { ButtonLink } from '@/components/Button'
 import backgroundImage from '@/images/background-faqs.jpg'
 import { websites } from '@/data/features'
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
 
 export function Websites() {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
@@ -51,7 +52,8 @@ export function Websites() {
             Websites
           </h2>
           <p className="mt-6 text-lg tracking-tight text-slate-700">
-            Websites built by Christopher Pezza available to the public to view and explore.
+            Websites built by Christopher Pezza available to the public to view
+            and explore.
           </p>
         </div>
         <Tab.Group
@@ -81,8 +83,7 @@ export function Websites() {
                           className={clsx(
                             'font-display text-lg [&:not(:focus-visible)]:focus:outline-none',
                             {
-                              'text-blue-800':
-                                selectedIndex === websiteIndex,
+                              'text-blue-800': selectedIndex === websiteIndex,
                               'text-blue-600 hover:text-slate-800 lg:text-slate-700':
                                 selectedIndex !== websiteIndex,
                             }
@@ -118,20 +119,15 @@ export function Websites() {
                       <Image
                         src={website.image}
                         alt=""
-                        layout="fill"
+                        fill
                         priority
                         sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
                       />
                     </div>
                     <div className="mt-3">
-                      <ButtonLink
-                        href={website.href}
-                        variant="solid"
-                      >
+                      <ButtonLink href={website.href} variant="solid">
                         <span className="mr-3">Vist</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
+                        <ArrowTopRightOnSquareIcon className="h-5 w-5" />
                       </ButtonLink>
                     </div>
                   </Tab.Panel>

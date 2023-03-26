@@ -8,21 +8,12 @@ import { nodepackages } from '@/data/features'
 function Feature({ feature, className }) {
   return (
     <div className={clsx(className)}>
-      <div className='w-9 rounded-lg'>
-        <Image
-          src={feature.icon}
-          alt=""
-          width={100}
-          height={100}
-        />
+      <div className="w-9 rounded-lg">
+        <Image src={feature.icon} alt="" width={100} height={100} />
       </div>
-      <h3 className='mt-6 text-sm font-medium text-blue-600'>
-        {feature.name}
-      </h3>
+      <h3 className="mt-6 text-sm font-medium text-blue-600">{feature.name}</h3>
       <p className="mt-2 font-display text-xl text-slate-900">
-        <Link href={feature.href}>
-          {feature.summary}
-        </Link>
+        <Link href={feature.href}>{feature.summary}</Link>
       </p>
       <p className="mt-4 text-sm text-slate-600">{feature.description}</p>
     </div>
@@ -73,7 +64,7 @@ export function NodePackages() {
             Node Packages
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Packages available to install via Node JS. 
+            Packages available to install via Node JS.
           </p>
         </div>
         <FeaturesMobile />

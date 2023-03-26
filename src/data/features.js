@@ -21,25 +21,25 @@ const nodepackages = [
     description:
       'A Package built to mimic headless UI for stimulus usage, favoring Tailwind style Guide',
     icon: logoStimulusTailwind,
-    href: 'https://stimulus-tailwind.chiefpansancolt.dev'
+    href: 'https://stimulus-tailwind.chiefpansancolt.dev',
   },
 ]
 
 const salesforce = [
   {
-    name: 'SalesForce Package',
+    name: 'Salesforce Package',
     summary: 'Package Builder',
     description:
       'A Installable Package that provides a user the ability to build Package.xml or sfdx Cmd outputs with ease.',
-    icon: 'fa-brands fa-salesforce',
+    icon: 'salesforce',
     iconClasses: 'text-salesforce h-9 w-9',
     href: 'https://package-builder.chiefpansancolt.dev',
   },
   {
-    name: 'SalesForce Resources',
+    name: 'Salesforce Resources',
     summary: 'LWC Components',
     description: 'Standard Components built with SLDS flavors for LWC usage.',
-    icon: 'fa-solid fa-bolt-lightning',
+    icon: 'bolt',
     iconClasses: 'text-yellow-500 h-6 w-6',
     href: 'https://lwc-components.chiefpansancolt.dev',
   },

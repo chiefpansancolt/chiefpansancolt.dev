@@ -13,13 +13,30 @@ export default function Document(props) {
           name="description"
           content="Find Documentation to all things built by Chiefpansancolt. From Ruby Gems, to Node Packages, to Salesforce resources, find Simplecov Tailwind, Stimulus Tailwind Components, Package Builder, LWC Components."
         />
-        <meta name="keywords" content="tailwind, stimulusJS, chiefpansancolt, devgenerator, simplecov, salesforce, lwc, lightning components"/>
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <meta
+          name="keywords"
+          content="tailwind, stimulusJS, chiefpansancolt, devgenerator, simplecov, salesforce, lwc, lightning components"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="icon" href="/favicon.ico" />
-        
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
