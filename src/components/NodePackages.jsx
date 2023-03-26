@@ -1,28 +1,18 @@
-import Image from 'next/image'
-import clsx from 'clsx'
-import Link from 'next/link'
-
-import { Container } from '@/components/Container'
-import { nodepackages } from '@/data/features'
+import { Container } from "@/components/Container"
+import { nodepackages } from "@/data/features"
+import clsx from "clsx"
+import Image from "next/image"
+import Link from "next/link"
 
 function Feature({ feature, className }) {
   return (
     <div className={clsx(className)}>
-      <div className='w-9 rounded-lg'>
-        <Image
-          src={feature.icon}
-          alt=""
-          width={100}
-          height={100}
-        />
+      <div className="w-9 rounded-lg">
+        <Image src={feature.icon} alt="" width={100} height={100} />
       </div>
-      <h3 className='mt-6 text-sm font-medium text-blue-600'>
-        {feature.name}
-      </h3>
+      <h3 className="mt-6 text-sm font-medium text-blue-600">{feature.name}</h3>
       <p className="mt-2 font-display text-xl text-slate-900">
-        <Link href={feature.href}>
-          {feature.summary}
-        </Link>
+        <Link href={feature.href}>{feature.summary}</Link>
       </p>
       <p className="mt-4 text-sm text-slate-600">{feature.description}</p>
     </div>
@@ -46,11 +36,7 @@ function FeaturesDesktop() {
     <div className="hidden lg:mt-20 lg:block">
       <div className="grid grid-cols-3 gap-x-8">
         {nodepackages.map((nodepackage) => (
-          <Feature
-            key={nodepackage.name}
-            feature={nodepackage}
-            className="relative"
-          />
+          <Feature key={nodepackage.name} feature={nodepackage} className="relative" />
         ))}
       </div>
     </div>
@@ -73,7 +59,7 @@ export function NodePackages() {
             Node Packages
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Packages available to install via Node JS. 
+            Packages available to install via Node JS.
           </p>
         </div>
         <FeaturesMobile />

@@ -1,28 +1,28 @@
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
-import { Tab } from '@headlessui/react'
-import clsx from 'clsx'
-
-import { Container } from '@/components/Container'
-import { ButtonLink } from '@/components/Button'
-import backgroundImage from '@/images/background-faqs.jpg'
-import { websites } from '@/data/features'
+import { ButtonLink } from "@/components/Button"
+import { Container } from "@/components/Container"
+import { websites } from "@/data/features"
+import backgroundImage from "@/images/background-faqs.jpg"
+import { Tab } from "@headlessui/react"
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid"
+import clsx from "clsx"
+import Image from "next/image"
+import { useEffect, useState } from "react"
 
 export function Websites() {
-  let [tabOrientation, setTabOrientation] = useState('horizontal')
+  let [tabOrientation, setTabOrientation] = useState("horizontal")
 
   useEffect(() => {
-    let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
+    let lgMediaQuery = window.matchMedia("(min-width: 1024px)")
 
     function onMediaQueryChange({ matches }) {
-      setTabOrientation(matches ? 'vertical' : 'horizontal')
+      setTabOrientation(matches ? "vertical" : "horizontal")
     }
 
     onMediaQueryChange(lgMediaQuery)
-    lgMediaQuery.addEventListener('change', onMediaQueryChange)
+    lgMediaQuery.addEventListener("change", onMediaQueryChange)
 
     return () => {
-      lgMediaQuery.removeEventListener('change', onMediaQueryChange)
+      lgMediaQuery.removeEventListener("change", onMediaQueryChange)
     }
   }, [])
 
@@ -33,14 +33,7 @@ export function Websites() {
       className="relative overflow-hidden bg-slate-50 pt-20 pb-28 sm:py-32"
     >
       <div className="absolute top-0 left-1/2 -translate-x-[30%] -translate-y-[25%]">
-        <Image
-          src={backgroundImage}
-          alt=""
-          width={2245}
-          height={1636}
-          layout="fixed"
-          unoptimized
-        />
+        <Image src={backgroundImage} alt="" width={2245} height={1636} unoptimized />
       </div>
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
@@ -57,7 +50,7 @@ export function Websites() {
         <Tab.Group
           as="div"
           className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
-          vertical={tabOrientation === 'vertical'}
+          vertical={tabOrientation === "vertical"}
         >
           {({ selectedIndex }) => (
             <>
@@ -67,11 +60,11 @@ export function Websites() {
                     <div
                       key={website.title}
                       className={clsx(
-                        'group relative rounded-full py-1 px-4 lg:rounded-r-none lg:rounded-l-xl lg:p-6',
+                        "group relative rounded-full py-1 px-4 lg:rounded-r-none lg:rounded-l-xl lg:p-6",
                         {
-                          'bg-blue-600 lg:bg-blue-600/10 lg:ring-1 lg:ring-inset lg:ring-blue-600/10':
+                          "bg-blue-600 lg:bg-blue-600/10 lg:ring-1 lg:ring-inset lg:ring-blue-600/10":
                             selectedIndex === websiteIndex,
-                          'hover:bg-blue-600/10 lg:hover:bg-blue-600/5':
+                          "hover:bg-blue-600/10 lg:hover:bg-blue-600/5":
                             selectedIndex !== websiteIndex,
                         }
                       )}
@@ -79,11 +72,10 @@ export function Websites() {
                       <h3>
                         <Tab
                           className={clsx(
-                            'font-display text-lg [&:not(:focus-visible)]:focus:outline-none',
+                            "font-display text-lg [&:not(:focus-visible)]:focus:outline-none",
                             {
-                              'text-blue-800':
-                                selectedIndex === websiteIndex,
-                              'text-blue-600 hover:text-slate-800 lg:text-slate-700':
+                              "text-blue-800": selectedIndex === websiteIndex,
+                              "text-blue-600 hover:text-slate-800 lg:text-slate-700":
                                 selectedIndex !== websiteIndex,
                             }
                           )}
@@ -93,9 +85,9 @@ export function Websites() {
                         </Tab>
                       </h3>
                       <p
-                        className={clsx('mt-2 hidden text-sm lg:block', {
-                          'text-slate-900': selectedIndex === websiteIndex,
-                          'text-blue-600 group-hover:text-slate-900':
+                        className={clsx("mt-2 hidden text-sm lg:block", {
+                          "text-slate-900": selectedIndex === websiteIndex,
+                          "text-blue-600 group-hover:text-slate-900":
                             selectedIndex !== websiteIndex,
                         })}
                       >
@@ -118,20 +110,15 @@ export function Websites() {
                       <Image
                         src={website.image}
                         alt=""
-                        layout="fill"
+                        fill
                         priority
                         sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
                       />
                     </div>
                     <div className="mt-3">
-                      <ButtonLink
-                        href={website.href}
-                        variant="solid"
-                      >
+                      <ButtonLink href={website.href} variant="solid">
                         <span className="mr-3">Vist</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
+                        <ArrowTopRightOnSquareIcon className="h-5 w-5" />
                       </ButtonLink>
                     </div>
                   </Tab.Panel>

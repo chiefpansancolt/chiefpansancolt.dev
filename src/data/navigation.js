@@ -1,20 +1,20 @@
 const navs = [
   {
     name: "Ruby Gems",
-    href: "#rubygems"
+    href: "#rubygems",
   },
   {
     name: "Node Packages",
-    href: "#nodepackages"
+    href: "#nodepackages",
   },
   {
     name: "Salesforce Resources",
-    href: "#salesforce"
+    href: "#salesforce",
   },
   {
     name: "Websites",
-    href: "#websites"
-  }
+    href: "#websites",
+  },
 ]
 
 export default navs

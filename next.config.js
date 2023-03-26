@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  images: {
+    loader: "custom",
+    loaderFile: "./akamai-loader.js",
+  },
 }
-
-module.exports = nextConfig
