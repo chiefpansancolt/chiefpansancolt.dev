@@ -90,18 +90,22 @@ export function Header() {
           <ul className="flex items-center">
             <li>
               <Link href="/">
-                <a>
-                  <span className="sr-only">Home</span>
-                  <Logo />
-                </a>
+                <span className="sr-only">Home</span>
+                <Logo />
               </Link>
             </li>
             {navs.map((item, index) => (
-              <li key={item.name} className={classNames(index === 0 ? "ml-auto" : "ml-4", "hidden md:block")}>
+              <li
+                key={item.name}
+                className={classNames(
+                  index === 0 ? 'ml-auto' : 'ml-4',
+                  'hidden md:block'
+                )}
+              >
                 <Link href={item.href}>
-                  <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
+                  <span className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
                     {item.name}
-                  </a>
+                  </span>
                 </Link>
               </li>
             ))}
