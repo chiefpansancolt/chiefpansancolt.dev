@@ -10,6 +10,7 @@
 Here you will find all the offereings Chief has built over the years, from Ruby Gems, Node Packages, Salesforce Resources and Packages, and Websites. Checkout documentation for each where applicable here.
 
 > My website, created with Next.js, TailwindCSS, and TailwindUI
+
 ## Prerequisites
 
 ### JavaScript
