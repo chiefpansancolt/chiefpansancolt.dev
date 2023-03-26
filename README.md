@@ -5,6 +5,7 @@
 [![GitHub Workflow Deploy Status](https://img.shields.io/github/actions/workflow/status/chiefpansancolt/chiefpansancolt.dev/deploy.yml?label=Deploy&logo=github&style=flat-square)](https://github.com/chiefpansancolt/chiefpansancolt.dev/actions/workflows/deploy.yml)
 [![GitHub Workflow Build Status](https://img.shields.io/github/actions/workflow/status/chiefpansancolt/chiefpansancolt.dev/build.yml?label=Build&logo=github&style=flat-square)](https://github.com/chiefpansancolt/chiefpansancolt.dev/actions/workflows/build.yml)
 [![GitHub Workflow Lint Status](https://img.shields.io/github/actions/workflow/status/chiefpansancolt/chiefpansancolt.dev/lints.yml?label=Lints&logo=github&style=flat-square)](https://github.com/chiefpansancolt/chiefpansancolt.dev/actions/workflows/lints.yml)
+[![CodeQL](https://github.com/chiefpansancolt/chiefpansancolt.dev/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/chiefpansancolt/chiefpansancolt.dev/actions/workflows/github-code-scanning/codeql)
 
 Here you will find all the offereings Chief has built over the years, from Ruby Gems, Node Packages, Salesforce Resources and Packages, and Websites. Checkout documentation for each where applicable here.
 
