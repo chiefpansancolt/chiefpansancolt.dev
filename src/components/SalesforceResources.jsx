@@ -69,7 +69,7 @@ export function SalesforceResources() {
       className="relative overflow-hidden bg-blue-600 pt-20 pb-14 sm:pb-20 sm:pt-32 lg:pb-32"
     >
       <div className="absolute top-1/2 left-1/2 -translate-x-[44%] -translate-y-[42%]">
-        <Image src={backgroundImage} alt="" width={2245} height={1636} layout="fixed" unoptimized />
+        <Image src={backgroundImage} alt="" width={2245} height={1636} unoptimized />
       </div>
       <Container className="relative">
         <div className="mx-auto max-w-2xl md:text-center">

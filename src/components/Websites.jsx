@@ -33,7 +33,7 @@ export function Websites() {
       className="relative overflow-hidden bg-slate-50 pt-20 pb-28 sm:py-32"
     >
       <div className="absolute top-0 left-1/2 -translate-x-[30%] -translate-y-[25%]">
-        <Image src={backgroundImage} alt="" width={2245} height={1636} layout="fixed" unoptimized />
+        <Image src={backgroundImage} alt="" width={2245} height={1636} unoptimized />
       </div>
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
