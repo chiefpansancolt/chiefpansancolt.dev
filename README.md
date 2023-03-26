@@ -1,35 +1,33 @@
-# Salient
+<h1 align="center">
+  <a href="https://chiefpansancolt.dev" target="_blank">chiefpansancolt.dev</a>
+</h1>
 
-Salient is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+[![GitHub Workflow Deploy Status](https://img.shields.io/github/actions/workflow/status/chiefpansancolt/chiefpansancolt.dev/deploy.yml?label=Deploy&logo=github&style=flat-square)](https://github.com/chiefpansancolt/chiefpansancolt.dev/actions/workflows/deploy.yml)
+[![GitHub Workflow Build Status](https://img.shields.io/github/actions/workflow/status/chiefpansancolt/chiefpansancolt.dev/build.yml?label=Build&logo=github&style=flat-square)](https://github.com/chiefpansancolt/chiefpansancolt.dev/actions/workflows/build.yml)
+[![GitHub Workflow Lint Status](https://img.shields.io/github/actions/workflow/status/chiefpansancolt/chiefpansancolt.dev/lints.yml?label=Lints&logo=github&style=flat-square)](https://github.com/chiefpansancolt/chiefpansancolt.dev/actions/workflows/lints.yml)
 
-## Getting started
+Here you will find all the offereings Chief has built over the years, from Ruby Gems, Node Packages, Salesforce Resources and Packages, and Websites. Checkout documentation for each where applicable here.
 
-To get started with this template, first install the npm dependencies:
+> My website, created with Next.js, TailwindCSS, and TailwindUI
+## Prerequisites
 
-```bash
-npm install
-```
+### JavaScript
 
-Next, run the development server:
+<p>
+  <img src="https://img.shields.io/badge/node-18.x.x-blue.svg" />
+  <img src="https://img.shields.io/badge/yarn-1.22.x-blue.svg" />
+</p>
 
-```bash
-npm run dev
-```
+## Author
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+👤 **Christopher Pezza**
 
-## Customizing
+- Website Persona: https://chiefpansancolt.live
+- Website Personal: https://chrispezza.me
+- Twitter: [@chiefpansancolt](https://twitter.com/chiefpansancolt)
+- Github: [@chiefpansancolt](https://github.com/chiefpansancolt)
+- LinkedIn: [pezzachristopher](https://linkedin.com/in/pezzachristopher)
 
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+## Show your support
 
-## License
-
-This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
-
-## Learn more
-
-To learn more about the technologies used in this site template, see the following resources:
-
-- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
-- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
-- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
+Give a ⭐️ if this project helped you!
