@@ -1,22 +1,24 @@
-import { Inter } from "next/font/google"
+import '@/styles/tailwind.css'
 import clsx from 'clsx'
+import 'focus-visible'
+import { Inter } from 'next/font/google'
 
-import "@/styles/tailwind.css"
-import "focus-visible"
-
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "Chiefpansancolt Development",
+  title: 'Chiefpansancolt Development',
   description:
-    "Find Documentation to all things built by Chiefpansancolt. From Ruby Gems, to Node Packages, to Salesforce resources, find Simplecov Tailwind, Stimulus Tailwind Components, Package Builder, LWC Components.",
+    'Find Documentation to all things built by Chiefpansancolt. From Ruby Gems, to Node Packages, to Salesforce resources, find Simplecov Tailwind, Stimulus Tailwind Components, Package Builder, LWC Components.',
   keywords:
-    "tailwind, stimulusJS, chiefpansancolt, devgenerator, simplecov, salesforce, lwc, lightning components",
+    'tailwind, stimulusJS, chiefpansancolt, devgenerator, simplecov, salesforce, lwc, lightning components',
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-full scroll-smooth bg-white antialiased [font-feature-settings:'ss01']">
+    <html
+      lang="en"
+      className="h-full scroll-smooth bg-white antialiased [font-feature-settings:'ss01']"
+    >
       <head>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -39,9 +41,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={clsx('flex h-full flex-col', inter.className)}>
-        {children}
-      </body>
+      <body className={clsx('flex h-full flex-col', inter.className)}>{children}</body>
     </html>
   )
 }

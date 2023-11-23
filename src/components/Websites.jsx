@@ -1,30 +1,30 @@
 'use client'
 
-import { ButtonLink } from "@/components/Button"
-import { Container } from "@/components/Container"
-import { websites } from "@/data/features"
-import backgroundImage from "@/images/background-faqs.jpg"
-import { Tab } from "@headlessui/react"
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid"
-import clsx from "clsx"
-import Image from "next/image"
-import { useEffect, useState } from "react"
+import { ButtonLink } from '@/components/Button'
+import { Container } from '@/components/Container'
+import { websites } from '@/data/features'
+import backgroundImage from '@/images/background-faqs.jpg'
+import { Tab } from '@headlessui/react'
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
+import clsx from 'clsx'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 export function Websites() {
-  let [tabOrientation, setTabOrientation] = useState("horizontal")
+  let [tabOrientation, setTabOrientation] = useState('horizontal')
 
   useEffect(() => {
-    let lgMediaQuery = window.matchMedia("(min-width: 1024px)")
+    let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
 
     function onMediaQueryChange({ matches }) {
-      setTabOrientation(matches ? "vertical" : "horizontal")
+      setTabOrientation(matches ? 'vertical' : 'horizontal')
     }
 
     onMediaQueryChange(lgMediaQuery)
-    lgMediaQuery.addEventListener("change", onMediaQueryChange)
+    lgMediaQuery.addEventListener('change', onMediaQueryChange)
 
     return () => {
-      lgMediaQuery.removeEventListener("change", onMediaQueryChange)
+      lgMediaQuery.removeEventListener('change', onMediaQueryChange)
     }
   }, [])
 
@@ -52,7 +52,7 @@ export function Websites() {
         <Tab.Group
           as="div"
           className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
-          vertical={tabOrientation === "vertical"}
+          vertical={tabOrientation === 'vertical'}
         >
           {({ selectedIndex }) => (
             <>
@@ -62,11 +62,11 @@ export function Websites() {
                     <div
                       key={website.title}
                       className={clsx(
-                        "group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6",
+                        'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
                         {
-                          "bg-blue-600 lg:bg-blue-600/10 lg:ring-1 lg:ring-inset lg:ring-blue-600/10":
+                          'bg-blue-600 lg:bg-blue-600/10 lg:ring-1 lg:ring-inset lg:ring-blue-600/10':
                             selectedIndex === websiteIndex,
-                          "hover:bg-blue-600/10 lg:hover:bg-blue-600/5":
+                          'hover:bg-blue-600/10 lg:hover:bg-blue-600/5':
                             selectedIndex !== websiteIndex,
                         }
                       )}
@@ -74,10 +74,10 @@ export function Websites() {
                       <h3>
                         <Tab
                           className={clsx(
-                            "font-display text-lg [&:not(:focus-visible)]:focus:outline-none",
+                            'font-display text-lg [&:not(:focus-visible)]:focus:outline-none',
                             {
-                              "text-blue-800": selectedIndex === websiteIndex,
-                              "text-blue-600 hover:text-slate-800 lg:text-slate-700":
+                              'text-blue-800': selectedIndex === websiteIndex,
+                              'text-blue-600 hover:text-slate-800 lg:text-slate-700':
                                 selectedIndex !== websiteIndex,
                             }
                           )}
@@ -87,9 +87,9 @@ export function Websites() {
                         </Tab>
                       </h3>
                       <p
-                        className={clsx("mt-2 hidden text-sm lg:block", {
-                          "text-slate-900": selectedIndex === websiteIndex,
-                          "text-blue-600 group-hover:text-slate-900":
+                        className={clsx('mt-2 hidden text-sm lg:block', {
+                          'text-slate-900': selectedIndex === websiteIndex,
+                          'text-blue-600 group-hover:text-slate-900':
                             selectedIndex !== websiteIndex,
                         })}
                       >
