@@ -1,7 +1,7 @@
-import { Container } from "@/components/Container"
-import { Logo } from "@/components/Logo"
-import navs from "@/data/navigation"
-import Link from "next/link"
+import { Container } from '@/components/Container'
+import { Logo } from '@/components/Logo'
+import navs from '@/data/navigation'
+import Link from 'next/link'
 
 export function Footer() {
   return (

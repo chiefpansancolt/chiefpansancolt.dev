@@ -1,13 +1,15 @@
-import { Container } from "@/components/Container"
-import { Logo } from "@/components/Logo"
-import navs from "@/data/navigation"
-import { Popover, Transition } from "@headlessui/react"
-import clsx from "clsx"
-import Link from "next/link"
-import { Fragment } from "react"
+'use client'
+
+import { Container } from '@/components/Container'
+import { Logo } from '@/components/Logo'
+import navs from '@/data/navigation'
+import { Popover, Transition } from '@headlessui/react'
+import clsx from 'clsx'
+import Link from 'next/link'
+import { Fragment } from 'react'
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ")
+  return classes.filter(Boolean).join(' ')
 }
 
 function MobileNavigation() {
@@ -26,14 +28,14 @@ function MobileNavigation() {
             >
               <path
                 d="M0 1H14M0 7H14M0 13H14"
-                className={clsx("origin-center transition", {
-                  "scale-90 opacity-0": open,
+                className={clsx('origin-center transition', {
+                  'scale-90 opacity-0': open,
                 })}
               />
               <path
                 d="M2 2L12 12M12 2L2 12"
-                className={clsx("origin-center transition", {
-                  "scale-90 opacity-0": !open,
+                className={clsx('origin-center transition', {
+                  'scale-90 opacity-0': !open,
                 })}
               />
             </svg>
@@ -96,10 +98,10 @@ export function Header() {
             {navs.map((item, index) => (
               <li
                 key={item.name}
-                className={classNames(index === 0 ? "ml-auto" : "ml-4", "hidden md:block")}
+                className={classNames(index === 0 ? 'ml-auto' : 'ml-4', 'hidden md:block')}
               >
                 <Link href={item.href}>
-                  <span className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
+                  <span className="rounded-lg px-2 py-1 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
                     {item.name}
                   </span>
                 </Link>
