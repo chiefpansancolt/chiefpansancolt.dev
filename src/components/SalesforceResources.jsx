@@ -66,9 +66,9 @@ export function SalesforceResources() {
     <section
       id="salesforce"
       aria-labelledby="salesforce-title"
-      className="relative overflow-hidden bg-blue-600 pt-20 pb-14 sm:pb-20 sm:pt-32 lg:pb-32"
+      className="relative overflow-hidden bg-blue-600 pb-14 pt-20 sm:pb-20 sm:pt-32 lg:pb-32"
     >
-      <div className="absolute top-1/2 left-1/2 -translate-x-[44%] -translate-y-[42%]">
+      <div className="absolute left-1/2 top-1/2 -translate-x-[44%] -translate-y-[42%]">
         <Image src={backgroundImage} alt="" width={2245} height={1636} unoptimized />
       </div>
       <Container className="relative">
