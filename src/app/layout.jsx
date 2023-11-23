@@ -2,6 +2,7 @@ import '@/styles/tailwind.css'
 import clsx from 'clsx'
 import 'focus-visible'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -41,7 +42,10 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={clsx('flex h-full flex-col', inter.className)}>{children}</body>
+      <body className={clsx('flex h-full flex-col', inter.className)}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
