@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { rubygems } from '@/data/features'
+import { desktopapp } from '@/data/features'
 import backgroundImage from '@/images/background-features.jpg'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
@@ -10,7 +10,7 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
-export function RubyGems() {
+export function DesktopApps() {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
 
   useEffect(() => {
@@ -30,8 +30,8 @@ export function RubyGems() {
 
   return (
     <section
-      id="rubygems"
-      aria-labelledby="rubygems-title"
+      id="desktopapp"
+      aria-labelledby="desktopapp-title"
       className="relative overflow-hidden bg-blue-600 pb-28 pt-20 sm:py-32"
     >
       <Image
@@ -45,13 +45,13 @@ export function RubyGems() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2
-            id="rubygems-title"
+            id="desktopapp-title"
             className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl"
           >
-            Ruby Gems
+            Desktop Apps
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Ruby Gems Available to install via Ruby.
+            Apps Available to install on a Desktop.
           </p>
         </div>
         <TabGroup
@@ -63,15 +63,15 @@ export function RubyGems() {
             <>
               <div className="-mx-4 overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
                 <TabList className="relative z-10 flex space-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:space-x-0 lg:space-y-1 lg:whitespace-normal">
-                  {rubygems.map((rubygem, rubygemIndex) => (
+                  {desktopapp.map((desktopapp, desktopappIndex) => (
                     <div
-                      key={rubygem.title}
+                      key={desktopapp.title}
                       className={clsx(
                         'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
                         {
                           'bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10':
-                            selectedIndex === rubygemIndex,
-                          'hover:bg-white/10 lg:hover:bg-white/5': selectedIndex !== rubygemIndex,
+                            selectedIndex === desktopappIndex,
+                          'hover:bg-white/10 lg:hover:bg-white/5': selectedIndex !== desktopappIndex,
                         }
                       )}
                     >
@@ -80,40 +80,40 @@ export function RubyGems() {
                           className={clsx(
                             'font-display text-lg not-focus-visible:focus:outline-hidden',
                             {
-                              'text-blue-600 lg:text-white': selectedIndex === rubygemIndex,
+                              'text-blue-600 lg:text-white': selectedIndex === desktopappIndex,
                               'text-blue-100 hover:text-white lg:text-white':
-                                selectedIndex !== rubygemIndex,
+                                selectedIndex !== desktopappIndex,
                             }
                           )}
                         >
                           <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
-                          {rubygem.title}
+                          {desktopapp.title}
                         </Tab>
                       </h3>
                       <p
                         className={clsx('mt-2 hidden text-sm lg:block', {
-                          'text-white': selectedIndex === rubygemIndex,
-                          'text-blue-100 group-hover:text-white': selectedIndex !== rubygemIndex,
+                          'text-white': selectedIndex === desktopappIndex,
+                          'text-blue-100 group-hover:text-white': selectedIndex !== desktopappIndex,
                         })}
                       >
-                        {rubygem.description}
+                        {desktopapp.description}
                       </p>
                     </div>
                   ))}
                 </TabList>
               </div>
               <TabPanels className="lg:col-span-7">
-                {rubygems.map((rubygem) => (
-                  <TabPanel key={rubygem.title} unmount={false}>
+                {desktopapp.map((desktopapp) => (
+                  <TabPanel key={desktopapp.title} unmount={false}>
                     <div className="relative sm:px-6 lg:hidden">
                       <div className="absolute -inset-x-4 -bottom-17 -top-26 bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
                       <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
-                        {rubygem.description}
+                        {desktopapp.description}
                       </p>
                     </div>
                     <div className="relative mt-10 aspect-1085/730 w-180 overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-271.25">
                       <Image
-                        src={rubygem.image}
+                        src={desktopapp.image}
                         alt=""
                         fill
                         priority
@@ -121,7 +121,7 @@ export function RubyGems() {
                       />
                     </div>
                     <div className="mt-3">
-                      <Button href={rubygem.href} variant="solid">
+                      <Button href={desktopapp.href} variant="solid">
                         <span className="mr-3">Documentation</span>
                         <ArrowTopRightOnSquareIcon className="h-5 w-5" />
                       </Button>

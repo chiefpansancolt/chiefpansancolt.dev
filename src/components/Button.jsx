@@ -1,11 +1,11 @@
-import clsx from 'clsx'
 import Link from 'next/link'
+import clsx from 'clsx'
 
 const baseStyles = {
   solid:
-    'group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2',
+    'group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2',
   outline:
-    'group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none',
+    'group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm',
 }
 
 const variantStyles = {
@@ -24,22 +24,23 @@ const variantStyles = {
   },
 }
 
-export function Button({ variant = 'solid', color = 'slate', className, ...props }) {
-  return (
-    <button
-      className={clsx(baseStyles[variant], variantStyles[variant][color], className)}
-      {...props}
-    />
-  )
-}
+export function Button({ className, ...props }) {
+  props.variant ??= 'solid'
+  props.color ??= 'slate'
 
-export function ButtonLink({ variant = 'solid', color = 'slate', href, className, ...props }) {
-  return (
-    <Link href={href}>
-      <span
-        className={clsx(baseStyles[variant], variantStyles[variant][color], className)}
-        {...props}
-      />
-    </Link>
+  className = clsx(
+    baseStyles[props.variant],
+    props.variant === 'outline'
+      ? variantStyles.outline[props.color]
+      : props.variant === 'solid'
+        ? variantStyles.solid[props.color]
+        : undefined,
+    className,
+  )
+
+  return typeof props.href === 'undefined' ? (
+    <button className={className} {...props} />
+  ) : (
+    <Link className={className} {...props} />
   )
 }

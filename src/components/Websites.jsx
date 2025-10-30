@@ -1,10 +1,10 @@
 'use client'
 
-import { ButtonLink } from '@/components/Button'
+import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { websites } from '@/data/features'
 import backgroundImage from '@/images/background-faqs.jpg'
-import { Tab } from '@headlessui/react'
+import { Tab, TabGroup, TabPanel, TabPanels, TabList } from '@headlessui/react'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 import Image from 'next/image'
@@ -49,7 +49,7 @@ export function Websites() {
             Websites built by Christopher Pezza available to the public to view and explore.
           </p>
         </div>
-        <Tab.Group
+        <TabGroup
           as="div"
           className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
           vertical={tabOrientation === 'vertical'}
@@ -57,7 +57,7 @@ export function Websites() {
           {({ selectedIndex }) => (
             <>
               <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
-                <Tab.List className="relative z-10 flex space-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:space-x-0 lg:space-y-1 lg:whitespace-normal">
+                <TabList className="relative z-10 flex space-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:space-x-0 lg:space-y-1 lg:whitespace-normal">
                   {websites.map((website, websiteIndex) => (
                     <div
                       key={website.title}
@@ -74,7 +74,7 @@ export function Websites() {
                       <h3>
                         <Tab
                           className={clsx(
-                            'font-display text-lg [&:not(:focus-visible)]:focus:outline-none',
+                            'font-display text-lg not-focus-visible:focus:outline-hidden',
                             {
                               'text-blue-800': selectedIndex === websiteIndex,
                               'text-blue-600 hover:text-slate-800 lg:text-slate-700':
@@ -97,18 +97,18 @@ export function Websites() {
                       </p>
                     </div>
                   ))}
-                </Tab.List>
+                </TabList>
               </div>
-              <Tab.Panels className="lg:col-span-7">
+              <TabPanels className="lg:col-span-7">
                 {websites.map((website) => (
-                  <Tab.Panel key={website.title} unmount={false}>
+                  <TabPanel key={website.title} unmount={false}>
                     <div className="relative sm:px-6 lg:hidden">
-                      <div className="absolute -inset-x-4 -bottom-[4.25rem] -top-[6.5rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
+                      <div className="absolute -inset-x-4 -bottom-17 -top-26 bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
                       <p className="relative mx-auto max-w-2xl text-base text-slate-900 sm:text-center">
                         {website.description}
                       </p>
                     </div>
-                    <div className="relative mt-10 aspect-[1085/730] w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+                    <div className="relative mt-10 aspect-1085/730 w-180 overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-271.25">
                       <Image
                         src={website.image}
                         alt=""
@@ -118,17 +118,17 @@ export function Websites() {
                       />
                     </div>
                     <div className="mt-3">
-                      <ButtonLink href={website.href} variant="solid">
-                        <span className="mr-3">Vist</span>
+                      <Button href={website.href} variant="solid">
+                        <span className="mr-3">Visit</span>
                         <ArrowTopRightOnSquareIcon className="h-5 w-5" />
-                      </ButtonLink>
+                      </Button>
                     </div>
-                  </Tab.Panel>
+                  </TabPanel>
                 ))}
-              </Tab.Panels>
+              </TabPanels>
             </>
           )}
-        </Tab.Group>
+        </TabGroup>
       </Container>
     </section>
   )

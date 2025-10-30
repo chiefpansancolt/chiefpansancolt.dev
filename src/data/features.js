@@ -1,9 +1,9 @@
 import logoStimulusTailwind from '@/images/logos/Stimulus-x-Tailwind-Icon.png'
 import screenshotChiefpansancoltDevSite from '@/images/screenshots/chiefpansancolt-dev-site.png'
-import screenshotChiefpansancoltLiveSite from '@/images/screenshots/chiefpansancolt-live-site.png'
 import screenshotChrispezzaSite from '@/images/screenshots/chrispezza-site.png'
-import screenshotDevgeneratorSite from '@/images/screenshots/devgenerator-site.png'
 import screenshotSimplecovTailwind from '@/images/screenshots/simplecov-tailwindcss.png'
+import screenshotDinkumTrackerSite from '@/images/screenshots/Dinkum_Tracker_Overview.png'
+import screenshotTodoListApp from '@/images/screenshots/TodoList.png'
 
 const rubygems = [
   {
@@ -37,11 +37,11 @@ const salesforce = [
   },
   {
     name: 'Salesforce Resources',
-    summary: 'LWC Components',
-    description: 'Standard Components built with SLDS flavors for LWC usage.',
-    icon: 'bolt',
-    iconClasses: 'text-yellow-500 h-6 w-6',
-    href: 'https://lwc-components.chiefpansancolt.dev',
+    summary: 'Automation Framework',
+    description: 'Trigger Framework with Error Logger to help with Apex Development',
+    icon: 'salesforce',
+    iconClasses: 'text-salesforce h-9 w-9',
+    href: 'https://sf-automation-framework.chiefpansancolt.dev',
   },
 ]
 
@@ -53,13 +53,6 @@ const websites = [
     href: 'https://chrispezza.me',
   },
   {
-    title: 'chiefpansancolt.live',
-    description:
-      'Persona Site for Christopher Pezza showcasing Chiefpansancolt with livestreams, and videos.',
-    image: screenshotChiefpansancoltLiveSite,
-    href: 'https://chiefpansancolt.live',
-  },
-  {
     title: 'chiefpansancolt.dev',
     description:
       'Developer site for Christopher Pezza for all development work available to the public to provide a one stop shop to access to documentation and showcasing of items.',
@@ -67,12 +60,20 @@ const websites = [
     href: 'https://chiefpansancolt.dev',
   },
   {
-    title: 'devgenerator.io',
-    description:
-      'Site to give developers the ability to generate files based on common tools used like Package.json, Rubocop and many more.',
-    image: screenshotDevgeneratorSite,
-    href: 'https://devgenerator.io',
-  },
+    title: 'Dinkum Tracker',
+    description: 'A Web App to help track completion percentage for the game Dinkum.',
+    image: screenshotDinkumTrackerSite,
+    href: 'https://dinkumtracker.app',
+  }
 ]
 
-export { rubygems, nodepackages, salesforce, websites }
+const desktopapp = [
+  {
+    title: 'Todo List',
+    description: 'A simple todo list application built with Electron.',
+    image: screenshotTodoListApp,
+    href: 'https://todo-list.chiefpansancolt.dev',
+  }
+]
+
+export { rubygems, nodepackages, salesforce, websites, desktopapp }

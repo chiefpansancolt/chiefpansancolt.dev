@@ -15,6 +15,10 @@ const navs = [
     name: 'Websites',
     href: '#websites',
   },
+  {
+    name: 'Desktop Apps',
+    href: '#desktopapp',
+  },
 ]
 
 export default navs

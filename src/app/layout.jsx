@@ -1,24 +1,37 @@
-import '@/styles/tailwind.css'
+import '@/styles/tailwind.css';
+import { Analytics } from '@vercel/analytics/react'
 import clsx from 'clsx'
-import 'focus-visible'
-import { Inter } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/react';
-
-const inter = Inter({ subsets: ['latin'] })
+import { Inter, Lexend } from 'next/font/google'
 
 export const metadata = {
   title: 'Chiefpansancolt Development',
   description:
     'Find Documentation to all things built by Chiefpansancolt. From Ruby Gems, to Node Packages, to Salesforce resources, find Simplecov Tailwind, Stimulus Tailwind Components, Package Builder, LWC Components.',
   keywords:
-    'tailwind, stimulusJS, chiefpansancolt, devgenerator, simplecov, salesforce, lwc, lightning components',
+    'tailwind, stimulusJS, chiefpansancolt, simplecov, salesforce, lwc, lightning components',
 }
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+const lexend = Lexend({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-lexend',
+})
 
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className="h-full scroll-smooth bg-white antialiased [font-feature-settings:'ss01']"
+      className={clsx(
+        'h-full scroll-smooth bg-white antialiased',
+        inter.variable,
+        lexend.variable,
+      )}
     >
       <head>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -26,23 +39,8 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="icon" href="/favicon.ico" />
-
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
-            `,
-          }}
-        />
       </head>
-      <body className={clsx('flex h-full flex-col', inter.className)}>
+      <body className="flex h-full flex-col">
         {children}
         <Analytics />
       </body>
