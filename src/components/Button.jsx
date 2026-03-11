@@ -1,11 +1,10 @@
-import Link from 'next/link'
 import clsx from 'clsx'
+import Link from 'next/link'
 
 const baseStyles = {
   solid:
     'group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2',
-  outline:
-    'group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm',
+  outline: 'group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm',
 }
 
 const variantStyles = {
@@ -35,7 +34,7 @@ export function Button({ className, ...props }) {
       : props.variant === 'solid'
         ? variantStyles.solid[props.color]
         : undefined,
-    className,
+    className
   )
 
   return typeof props.href === 'undefined' ? (

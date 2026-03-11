@@ -1,4 +1,4 @@
-import '@/styles/tailwind.css';
+import '@/styles/tailwind.css'
 import { Analytics } from '@vercel/analytics/react'
 import clsx from 'clsx'
 import { Inter, Lexend } from 'next/font/google'
@@ -27,11 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={clsx(
-        'h-full scroll-smooth bg-white antialiased',
-        inter.variable,
-        lexend.variable,
-      )}
+      className={clsx('h-full scroll-smooth bg-white antialiased', inter.variable, lexend.variable)}
     >
       <head>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

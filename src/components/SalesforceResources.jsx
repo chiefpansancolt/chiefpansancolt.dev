@@ -2,10 +2,10 @@ import { Container } from '@/components/Container'
 import { salesforce } from '@/data/features'
 import backgroundImage from '@/images/background-features.jpg'
 import { BoltIcon } from '@heroicons/react/24/solid'
-import { FaSalesforce } from 'react-icons/fa'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
+import { FaSalesforce } from 'react-icons/fa'
 
 function Feature({ feature, className }) {
   return (
@@ -13,16 +13,14 @@ function Feature({ feature, className }) {
       <div className="rounded-lg">
         {(function () {
           if (feature.icon === 'salesforce') {
-            return (
-              <FaSalesforce className={feature.iconClasses} />
-            )
+            return <FaSalesforce className={feature.iconClasses} />
           } else if (feature.icon === 'bolt') {
             return <BoltIcon className={feature.iconClasses} />
           }
         })()}
       </div>
       <h3 className="mt-6 text-sm font-medium text-blue-100">{feature.name}</h3>
-      <p className="mt-2 font-display text-xl text-white">
+      <p className="font-display mt-2 text-xl text-white">
         <Link href={feature.href}>{feature.summary}</Link>
       </p>
       <p className="mt-4 text-sm text-slate-200">{feature.description}</p>
@@ -59,7 +57,7 @@ export function SalesforceResources() {
     <section
       id="salesforce"
       aria-labelledby="salesforce-title"
-      className="relative overflow-hidden bg-blue-600 pb-14 pt-20 sm:pb-20 sm:pt-32 lg:pb-32"
+      className="relative overflow-hidden bg-blue-600 pt-20 pb-14 sm:pt-32 sm:pb-20 lg:pb-32"
     >
       <Image
         className="absolute top-1/2 left-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"

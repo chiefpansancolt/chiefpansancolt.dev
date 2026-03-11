@@ -11,7 +11,7 @@ function Feature({ feature, className }) {
         <Image src={feature.icon} alt="" width={100} height={100} />
       </div>
       <h3 className="mt-6 text-sm font-medium text-blue-600">{feature.name}</h3>
-      <p className="mt-2 font-display text-xl text-slate-900">
+      <p className="font-display mt-2 text-xl text-slate-900">
         <Link href={feature.href}>{feature.summary}</Link>
       </p>
       <p className="mt-4 text-sm text-slate-600">{feature.description}</p>
@@ -48,7 +48,7 @@ export function NodePackages() {
     <section
       id="nodepackages"
       aria-labelledby="nodepackages-title"
-      className="pb-14 pt-20 sm:pb-20 sm:pt-32 lg:pb-32"
+      className="pt-20 pb-14 sm:pt-32 sm:pb-20 lg:pb-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">

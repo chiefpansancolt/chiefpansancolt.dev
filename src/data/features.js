@@ -1,9 +1,9 @@
 import logoStimulusTailwind from '@/images/logos/Stimulus-x-Tailwind-Icon.png'
+import screenshotDinkumTrackerSite from '@/images/screenshots/Dinkum_Tracker_Overview.png'
+import screenshotTodoListApp from '@/images/screenshots/TodoList.png'
 import screenshotChiefpansancoltDevSite from '@/images/screenshots/chiefpansancolt-dev-site.png'
 import screenshotChrispezzaSite from '@/images/screenshots/chrispezza-site.png'
 import screenshotSimplecovTailwind from '@/images/screenshots/simplecov-tailwindcss.png'
-import screenshotDinkumTrackerSite from '@/images/screenshots/Dinkum_Tracker_Overview.png'
-import screenshotTodoListApp from '@/images/screenshots/TodoList.png'
 
 const rubygems = [
   {
@@ -64,7 +64,7 @@ const websites = [
     description: 'A Web App to help track completion percentage for the game Dinkum.',
     image: screenshotDinkumTrackerSite,
     href: 'https://dinkumtracker.app',
-  }
+  },
 ]
 
 const desktopapp = [
@@ -73,7 +73,7 @@ const desktopapp = [
     description: 'A simple todo list application built with Electron.',
     image: screenshotTodoListApp,
     href: 'https://todo-list.chiefpansancolt.dev',
-  }
+  },
 ]
 
 export { rubygems, nodepackages, salesforce, websites, desktopapp }

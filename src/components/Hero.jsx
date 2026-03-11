@@ -1,11 +1,11 @@
-import { Button } from '@/components/Button';
-import { Container } from '@/components/Container';
-import { FaGithub } from 'react-icons/fa';
+import { Button } from '@/components/Button'
+import { Container } from '@/components/Container'
+import { FaGithub } from 'react-icons/fa'
 
 export function Hero() {
   return (
-    <Container className="pb-16 pt-20 text-center lg:pt-32">
-      <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
+    <Container className="pt-20 pb-16 text-center lg:pt-32">
+      <h1 className="font-display mx-auto max-w-4xl text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
         Welcome to{' '}
         <span className="relative whitespace-nowrap text-blue-600">Chiefpansancolt{`'`}s</span>{' '}
         Developer Space

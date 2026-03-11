@@ -32,7 +32,7 @@ export function DesktopApps() {
     <section
       id="desktopapp"
       aria-labelledby="desktopapp-title"
-      className="relative overflow-hidden bg-blue-600 pb-28 pt-20 sm:py-32"
+      className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
     >
       <Image
         className="absolute top-1/2 left-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
@@ -62,16 +62,17 @@ export function DesktopApps() {
           {({ selectedIndex }) => (
             <>
               <div className="-mx-4 overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
-                <TabList className="relative z-10 flex space-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:space-x-0 lg:space-y-1 lg:whitespace-normal">
+                <TabList className="relative z-10 flex space-x-4 px-4 whitespace-nowrap sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:space-y-1 lg:space-x-0 lg:whitespace-normal">
                   {desktopapp.map((desktopapp, desktopappIndex) => (
                     <div
                       key={desktopapp.title}
                       className={clsx(
                         'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
                         {
-                          'bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10':
+                          'bg-white lg:bg-white/10 lg:ring-1 lg:ring-white/10 lg:ring-inset':
                             selectedIndex === desktopappIndex,
-                          'hover:bg-white/10 lg:hover:bg-white/5': selectedIndex !== desktopappIndex,
+                          'hover:bg-white/10 lg:hover:bg-white/5':
+                            selectedIndex !== desktopappIndex,
                         }
                       )}
                     >
@@ -106,7 +107,7 @@ export function DesktopApps() {
                 {desktopapp.map((desktopapp) => (
                   <TabPanel key={desktopapp.title} unmount={false}>
                     <div className="relative sm:px-6 lg:hidden">
-                      <div className="absolute -inset-x-4 -bottom-17 -top-26 bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
+                      <div className="absolute -inset-x-4 -top-26 -bottom-17 bg-white/10 ring-1 ring-white/10 ring-inset sm:inset-x-0 sm:rounded-t-xl" />
                       <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
                         {desktopapp.description}
                       </p>

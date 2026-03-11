@@ -4,7 +4,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { websites } from '@/data/features'
 import backgroundImage from '@/images/background-faqs.jpg'
-import { Tab, TabGroup, TabPanel, TabPanels, TabList } from '@headlessui/react'
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 import Image from 'next/image'
@@ -32,9 +32,9 @@ export function Websites() {
     <section
       id="websites"
       aria-labelledby="websites-title"
-      className="relative overflow-hidden bg-slate-50 pb-28 pt-20 sm:py-32"
+      className="relative overflow-hidden bg-slate-50 pt-20 pb-28 sm:py-32"
     >
-      <div className="absolute left-1/2 top-0 -translate-x-[30%] -translate-y-[25%]">
+      <div className="absolute top-0 left-1/2 -translate-x-[30%] -translate-y-[25%]">
         <Image src={backgroundImage} alt="" width={2245} height={1636} unoptimized />
       </div>
       <Container className="relative">
@@ -57,14 +57,14 @@ export function Websites() {
           {({ selectedIndex }) => (
             <>
               <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
-                <TabList className="relative z-10 flex space-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:space-x-0 lg:space-y-1 lg:whitespace-normal">
+                <TabList className="relative z-10 flex space-x-4 px-4 whitespace-nowrap sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:space-y-1 lg:space-x-0 lg:whitespace-normal">
                   {websites.map((website, websiteIndex) => (
                     <div
                       key={website.title}
                       className={clsx(
                         'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
                         {
-                          'bg-blue-600 lg:bg-blue-600/10 lg:ring-1 lg:ring-inset lg:ring-blue-600/10':
+                          'bg-blue-600 lg:bg-blue-600/10 lg:ring-1 lg:ring-blue-600/10 lg:ring-inset':
                             selectedIndex === websiteIndex,
                           'hover:bg-blue-600/10 lg:hover:bg-blue-600/5':
                             selectedIndex !== websiteIndex,
@@ -103,7 +103,7 @@ export function Websites() {
                 {websites.map((website) => (
                   <TabPanel key={website.title} unmount={false}>
                     <div className="relative sm:px-6 lg:hidden">
-                      <div className="absolute -inset-x-4 -bottom-17 -top-26 bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
+                      <div className="absolute -inset-x-4 -top-26 -bottom-17 bg-white/10 ring-1 ring-white/10 ring-inset sm:inset-x-0 sm:rounded-t-xl" />
                       <p className="relative mx-auto max-w-2xl text-base text-slate-900 sm:text-center">
                         {website.description}
                       </p>
