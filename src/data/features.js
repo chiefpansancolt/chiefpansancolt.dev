@@ -1,5 +1,5 @@
-import logoStardewValley from '@/images/logos/stardew-valley-icon.png'
 import logoStimulusTailwind from '@/images/logos/Stimulus-x-Tailwind-Icon.png'
+import logoStardewValley from '@/images/logos/stardew-valley-icon.png'
 import screenshotDinkumTrackerSite from '@/images/screenshots/Dinkum_Tracker_Overview.png'
 import screenshotTodoListApp from '@/images/screenshots/TodoList.png'
 import screenshotChiefpansancoltDevSite from '@/images/screenshots/chiefpansancolt-dev-site.png'
@@ -27,10 +27,11 @@ const nodepackages = [
   {
     name: 'Stardew Valley Data',
     summary: 'stardew-valley-data',
-    description: 'A comprehensive, fully-typed dataset for Stardew Valley Structured JSON data, 1,900+ image assets, and a chainable query builder API for game items, crops, fish, villagers, shops, and more.',
+    description:
+      'A comprehensive, fully-typed dataset for Stardew Valley Structured JSON data, 1,900+ image assets, and a chainable query builder API for game items, crops, fish, villagers, shops, and more.',
     icon: logoStardewValley,
     href: 'https://stardew-valley-data.chiefpansancolt.dev',
-  }
+  },
 ]
 
 const salesforce = [
