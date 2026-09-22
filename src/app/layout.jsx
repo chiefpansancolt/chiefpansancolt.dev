@@ -1,5 +1,4 @@
 import '@/styles/tailwind.css'
-import { Analytics } from '@vercel/analytics/react'
 import clsx from 'clsx'
 import { Inter, Lexend } from 'next/font/google'
 
@@ -35,11 +34,13 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="icon" href="/favicon.ico" />
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "760280be042f4dab90d8ef41d4eecfdc"}'
+        />
       </head>
-      <body className="flex h-full flex-col">
-        {children}
-        <Analytics />
-      </body>
+      <body className="flex h-full flex-col">{children}</body>
     </html>
   )
 }
