@@ -1,6 +1,7 @@
 import logoStimulusTailwind from '@/images/logos/Stimulus-x-Tailwind-Icon.png'
 import logoStardewValley from '@/images/logos/stardew-valley-icon.png'
-import screenshotDinkumTrackerSite from '@/images/screenshots/Dinkum_Tracker_Overview.png'
+import logoClashOfClans from '@/images/logos/clash-of-clans-icon.jpeg'
+import screenshotGamerDexSite from '@/images/screenshots/gamerdex-site.png'
 import screenshotTodoListApp from '@/images/screenshots/TodoList.png'
 import screenshotChiefpansancoltDevSite from '@/images/screenshots/chiefpansancolt-dev-site.png'
 import screenshotChrispezzaSite from '@/images/screenshots/chrispezza-site.png'
@@ -31,6 +32,14 @@ const nodepackages = [
       'A comprehensive, fully-typed dataset for Stardew Valley Structured JSON data, 1,900+ image assets, and a chainable query builder API for game items, crops, fish, villagers, shops, and more.',
     icon: logoStardewValley,
     href: 'https://stardew-valley-data.chiefpansancolt.dev',
+  },
+  {
+    name: 'Clash of Clans Data',
+    summary: 'clash-of-clans-data',
+    description:
+      'A comprehensive, fully-typed dataset for Clash of Clans Structured JSON data, image assets, and a chainable query builder API for troops, spells, buildings, heroes, and more.',
+    icon: logoClashOfClans,
+    href: 'https://coc-data.chiefpansancolt.dev',
   },
 ]
 
@@ -69,10 +78,10 @@ const websites = [
     href: 'https://chiefpansancolt.dev',
   },
   {
-    title: 'Dinkum Tracker',
-    description: 'A Web App to help track completion percentage for the game Dinkum.',
-    image: screenshotDinkumTrackerSite,
-    href: 'https://dinkumtracker.app',
+    title: 'GamerDex',
+    description: 'Your Ultimate Game Companion, track items, complete collections, and conquer every game with purpose-built tracker companions. Never miss a collectible again.',
+    image: screenshotGamerDexSite,
+    href: 'https://gamerdex.app',
   },
 ]
 
