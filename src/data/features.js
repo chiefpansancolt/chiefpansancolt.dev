@@ -1,6 +1,7 @@
 import logoStimulusTailwind from '@/images/logos/Stimulus-x-Tailwind-Icon.png'
 import logoStardewValley from '@/images/logos/stardew-valley-icon.png'
 import logoClashOfClans from '@/images/logos/clash-of-clans-icon.jpeg'
+import logoDinkumData from '@/images/logos/dinkum-data-icon.png'
 import screenshotGamerDexSite from '@/images/screenshots/gamerdex-site.png'
 import screenshotTodoListApp from '@/images/screenshots/TodoList.png'
 import screenshotChiefpansancoltDevSite from '@/images/screenshots/chiefpansancolt-dev-site.png'
@@ -40,6 +41,14 @@ const nodepackages = [
       'A comprehensive, fully-typed dataset for Clash of Clans Structured JSON data, image assets, and a chainable query builder API for troops, spells, buildings, heroes, and more.',
     icon: logoClashOfClans,
     href: 'https://coc-data.chiefpansancolt.dev',
+  },
+  {
+    name: 'Dinkum Data',
+    summary: 'dinkum-data',
+    description:
+      'A comprehensive, fully-typed dataset for Dinkum: structured JSON data, 2,000+ image assets, and a chainable query builder API for animals, farming, gear, recipes, and more.',
+    icon: logoDinkumData,
+    href: 'https://dinkum-data.chiefpansancolt.dev',
   },
 ]
 
