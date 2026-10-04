@@ -1,11 +1,12 @@
 import logoStimulusTailwind from '@/images/logos/Stimulus-x-Tailwind-Icon.png'
-import logoStardewValley from '@/images/logos/stardew-valley-icon.png'
 import logoClashOfClans from '@/images/logos/clash-of-clans-icon.jpeg'
 import logoDinkumData from '@/images/logos/dinkum-data-icon.png'
-import screenshotGamerDexSite from '@/images/screenshots/gamerdex-site.png'
+import logoStardewValley from '@/images/logos/stardew-valley-icon.png'
+import screenshotDevHubApp from '@/images/screenshots/DevHub.png'
 import screenshotTodoListApp from '@/images/screenshots/TodoList.png'
 import screenshotChiefpansancoltDevSite from '@/images/screenshots/chiefpansancolt-dev-site.png'
 import screenshotChrispezzaSite from '@/images/screenshots/chrispezza-site.png'
+import screenshotGamerDexSite from '@/images/screenshots/gamerdex-site.png'
 import screenshotSimplecovTailwind from '@/images/screenshots/simplecov-tailwindcss.png'
 
 const rubygems = [
@@ -88,7 +89,8 @@ const websites = [
   },
   {
     title: 'GamerDex',
-    description: 'Your Ultimate Game Companion, track items, complete collections, and conquer every game with purpose-built tracker companions. Never miss a collectible again.',
+    description:
+      'Your Ultimate Game Companion, track items, complete collections, and conquer every game with purpose-built tracker companions. Never miss a collectible again.',
     image: screenshotGamerDexSite,
     href: 'https://gamerdex.app',
   },
@@ -100,6 +102,13 @@ const desktopapp = [
     description: 'A simple todo list application built with Electron.',
     image: screenshotTodoListApp,
     href: 'https://todo-list.chiefpansancolt.dev',
+  },
+  {
+    title: 'DevHub',
+    description:
+      'A free, open source macOS menu bar app that shows outdated Homebrew, Node, Ruby, Rust and Python packages and updates them in a click.',
+    image: screenshotDevHubApp,
+    href: 'https://devhub.chiefpansancolt.dev',
   },
 ]
 
